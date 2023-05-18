@@ -4,7 +4,7 @@ const { rofl, meme, thisMeme, neUmnichai, ktoI, shock, thanks, say, getDocument,
 const { handleLessonSchedule, addLinksToSchedule } = require('./functions/lessonsPin');
 
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = process.env.TOKEN || '5735930962:AAFjGUCmSoiorJdnaXv0Thg4QwquFw9g8pE';
+const TOKEN = process.env.TOKEN || "fuck, we haven't token in .env";
 const bot = new TelegramBot(TOKEN);
 bot.setWebHook('https://phpboyfriendbotwebhook.onrender.com/' + TOKEN);
 
