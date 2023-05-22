@@ -5,6 +5,7 @@ function handleLessonSchedule(bot, msg) {
 
     pinLessonsMessage(bot, msg);
     const formatedData = formatDataToSend(messageText);
+    if (formatedData === "fuck") return;
     sendDataToDB(formatedData);
 }
 
@@ -16,6 +17,7 @@ function pinLessonsMessage(bot, msg) {
 }
 
 function formatDataToSend(text) {
+    try {
     const data = {
         lessons: []
     };
@@ -58,6 +60,10 @@ function formatDataToSend(text) {
     // console.log(lastLessonTime);
 
     return data;
+    } catch(error) {
+       console.log(error);
+        return "fuck";
+    }
 }
 
 async function sendDataToDB(data) {
